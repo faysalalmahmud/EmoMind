@@ -15,7 +15,7 @@ import joblib
 
 
 #Function Call
-pipe_lr = joblib.load(open("emotion_classifier_pipe_lr_2.pkl", "rb"))
+pipe_lr = joblib.load(open("Model/emotion_classifier_pipe_lr_2.pkl", "rb"))
 
 def predict_emotion(docx):
     results = pipe_lr.predict([docx])
