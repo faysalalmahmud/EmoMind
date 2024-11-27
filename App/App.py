@@ -40,6 +40,7 @@ def main():
 
     menu = ["Home", "Monitor", "About"]
     choice = st.sidebar.selectbox("Menu", menu)
+    st.sidebar.markdown('<div style="text-align: center; position: fixed; bottom: 0; font-size:15px;">Developed with ❤️ by <br> TEAM MUSKETEER</div>', unsafe_allow_html=True)
 
     if choice == "Home":
         # st.snow()
