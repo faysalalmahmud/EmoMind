@@ -38,7 +38,7 @@ def main():
     st.markdown("<h6 style='text-align: center; color: gray;'>{ Developed By TEAM MUSKETEER }</h6>", unsafe_allow_html=True)
     # st.text("Developed By Team Musketeer")
 
-    menu = ["Home", "Monitor", "About"]
+    menu = ["Home", "About"]
     choice = st.sidebar.selectbox("Menu", menu)
     st.sidebar.markdown('<div style="text-align: center; position: fixed; bottom: 0; font-size:15px;">Developed with ❤️ by <br> TEAM MUSKETEER</div>', unsafe_allow_html=True)
 
@@ -59,10 +59,6 @@ def main():
             probability = get_prediction_proba(raw_text)
 
             with col1:
-                # with st.container(border=2):
-                #     st.success("Original Text")
-                #     st.write(raw_text)
-
 
                 with st.container(border=2):
                     st.success("Prediction")
@@ -83,10 +79,8 @@ def main():
                     st.plotly_chart(fig, use_container_width=True)
 
 
-
-
-    elif choice == "Monitor":
-        st.subheader("Monitor App")
+    # elif choice == "Monitor":
+    #     st.subheader("Monitor App")
     else:
         st.subheader("About")
 
