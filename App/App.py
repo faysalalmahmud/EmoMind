@@ -33,9 +33,10 @@ emotions_emoji_dict = {"anger":"😠", "disgust" : "🤮", "fear" : "😨", "hap
 
 def main():
     # st.title("Emotion Detection App")
-    st.markdown("<h1 style='text-align: center; color: black;'>Emotion Detection App</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: black;'>EmoMind</h1>", unsafe_allow_html=True)
+    st.markdown("<h5 style='text-align: center; color: gray;'>An Emotion Detection App</h5>", unsafe_allow_html=True)
+    st.markdown("<h6 style='text-align: center; color: gray;'>{ Developed By TEAM MUSKETEER }</h6>", unsafe_allow_html=True)
     # st.text("Developed By Team Musketeer")
-    st.markdown('<div style="text-align: center;">{Developed By Team Musketeer}</div>', unsafe_allow_html=True)
 
     menu = ["Home", "Monitor", "About"]
     choice = st.sidebar.selectbox("Menu", menu)
@@ -47,10 +48,11 @@ def main():
         with st.form(key='emotion_clf_form'):
             raw_text = st.text_area("Enter your text", key='emotion_clf_text')
             submit_text = st.form_submit_button("Submit")
+            st.markdown("<p style='text-align: center; color: gray; font-size:12px'>EmoMind can make mistakes, so double-check it</p>", unsafe_allow_html=True)
+        
         if submit_text and raw_text != '':
             col1, col2 = st.columns(2)
-
-
+            
             #Apply Function Here
             prediction = predict_emotion(raw_text)
             probability = get_prediction_proba(raw_text)
