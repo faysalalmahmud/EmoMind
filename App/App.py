@@ -32,8 +32,11 @@ emotions_emoji_dict = {"anger":"😠", "disgust" : "🤮", "fear" : "😨", "hap
 
 
 def main():
-    st.title("Emotion Detection App")
-    st.text("Developed By Team Musketeer")
+    # st.title("Emotion Detection App")
+    st.markdown("<h1 style='text-align: center; color: black;'>Emotion Detection App</h1>", unsafe_allow_html=True)
+    # st.text("Developed By Team Musketeer")
+    st.markdown('<div style="text-align: center;">{Developed By Team Musketeer}</div>', unsafe_allow_html=True)
+
     menu = ["Home", "Monitor", "About"]
     choice = st.sidebar.selectbox("Menu", menu)
 
