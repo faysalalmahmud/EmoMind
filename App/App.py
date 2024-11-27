@@ -42,7 +42,8 @@ def main():
 
     if choice == "Home":
         # st.snow()
-        st.subheader("Home \nEmotion In Text")
+        # st.subheader("Home \nEmotion In Text")
+        st.divider()
         with st.form(key='emotion_clf_form'):
             raw_text = st.text_area("Enter your text", key='emotion_clf_text')
             submit_text = st.form_submit_button("Submit")
